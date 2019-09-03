@@ -25,7 +25,6 @@ def list_all_items():
 def mark_completed(index):
     checklist[int(index)] = "{} {}".format("√", checklist[int(index)])
 
-    # Add code here that marks an item as completed
 
 def select(function_code):
     # Add item
@@ -76,23 +75,6 @@ def user_input(prompt):
     return user_input
     user_value = user_input("Please Enter a value: ")
     print(user_value)
-
-
-# def test():
-#     # Your testing code here
-#     # ...
-#     # Call your new function with the appropriate value
-#     # select("C")
-#     # View the results
-#     # list_all_items()
-#     # Call function with new value
-#     # select("R")
-#     # View results
-#     # list_all_items()
-#     # Continue until all code is run
-#     # list_all_items()
-
-
 
 running = True
 while running:
