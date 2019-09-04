@@ -10,8 +10,10 @@ def read(index):
 
 # UPDATE
 def update(index, item):
-    checklist[index] = item
-
+    if (int(index) < len(checklist)):
+        checklist[index] = item
+    else:
+        print("Index out of range")
 # DESTROY
 def destroy(index):
     checklist.pop(index)
@@ -23,8 +25,10 @@ def list_all_items():
         index += 1
 
 def mark_completed(index):
-    checklist[int(index)] = "{} {}".format("√", checklist[int(index)])
-
+    if (int(index) < len(checklist)):
+        checklist[int(index)] = "{} {}".format("√", checklist[int(index)])
+    else:
+        print("Index out of range")
 
 def select(function_code):
     # Add item
