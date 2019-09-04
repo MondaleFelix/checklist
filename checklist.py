@@ -34,7 +34,8 @@ def select(function_code):
         list_all_items()
     # Remove item
     elif function_code == "D" or function_code == "d":
-        # remove from list
+        # Checks if list is empty
+        # If not empty item is destroyed
         if len(checklist) > 0:
             item_index = user_input("Enter index number: ")
             destroy(item_index)
@@ -68,6 +69,17 @@ def select(function_code):
         print("Invalid Input")
     return True
 
+def test():
+    create("eggs")
+    print(checklist)
+    read(0)
+    print(checklist)
+    update(0, "milk")
+    print(checklist)
+    destroy(0)
+    print(checklist)
+
+
 def user_input(prompt):
     # the input function will display a message in the terminal
     # and wait for user input.
@@ -75,6 +87,8 @@ def user_input(prompt):
     return user_input
     user_value = user_input("Please Enter a value: ")
     print(user_value)
+
+# test()
 
 running = True
 while running:
